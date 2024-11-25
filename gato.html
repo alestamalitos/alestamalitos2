@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicTacToe</title>
+<link rel="stylesheet" href="./CSS/Gato.css">
+<script src="./JS/gatoOB.js"></script>
+</head>
+ 
+<body style="background-color: #0f0f1b;" >
+    <div class="container">
+        <a href="Index.html" class="back-button"><button>Regresar al menú</button></a><br>
+        <h1>Juego del Gato</h1><br>
+        
+        <table>
+
+        <tr>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+        </tr>
+            <tr>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+        </tr>
+            <tr>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+        </tr>
+
+        </table>
+        <h2 id="turno">turno O</h2>
+        <input type="submit" value="Reiniciar" onclick="location.reload();">
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/cMagico.css">
+    <title>Cuadrado Magico</title>
+    <script src="./JS/jscuadradomob.js"></script>
+</head>
+<body onload="Generar()" class='outset'>
+    <div class="container">
+        <p><a href="Index.html"><button>Regresar al menú.</button></a><br></p>
+        <h1>Cuadrado Mágico</h1>
+        <p>
+            Los cuadrados mágicos son un conjunto de números enteros diferentes colocados en las casillas de un cuadrado, y se caracterizan porque la suma de sus filas, columnas y diagonales principales es siempre la misma. El valor de la suma es denominado Constante mágica del Cuadrado.
+        </p>
+        <p>
+            Seleccione el tamaño del cuadrado:
+            <select id="lados" onchange="Generar()">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </p>
+        <input type="button" value="Generar" onclick="Generar()">
+        <input type="button" value="Calcular" onclick="Calcular()">
+        <input type="button" value="Ejemplo de Cuadrado" onclick="EjemploCuadrado()">
+        <input type="button" value="Ejemplo de Cuadrado mágico" onclick="EjemploMagico()">
+        <table border="0.5" id="cuadrado"></table>
+        <h1 id="verificar" style="color: crimson;">No es cuadrado magico</h1>
+    </div>
+</body>
+</html>

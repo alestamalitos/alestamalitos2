@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama</title>
+    <link rel="stylesheet" href="./CSS/memorama.css">
+    <script src="./JS/jsMemoramaOB.js"></script>
+
+</head>
+<H1>Memorama</H1>
+<a href="Index.html"><button>Regresar al menú</button></a><br>
+<h2 id="contador" >Pares encontrados: 0</h2>
+<body bgcolor="#eed8f5" class="outset" onload="Revolver(), Fondo()"></body>
+<input type="button" value="Reiniciar" onclick="Reiniciar()" id="restart">
+    <div class="container">
+        <table id="tablita">
+            <tr>
+                <td><img src="./img/9.jpeg" id="0" srcset="" class="imagen" onclick="CambiarImagen(this,0)"></td>
+                <td><img src="./img/9.jpeg" id="1" srcset="" class="imagen" onclick="CambiarImagen(this,1)"></td>
+                <td><img src="./img/9.jpeg" id="2" srcset="" class="imagen" onclick="CambiarImagen(this,2)"></td>
+                <td><img src="./img/9.jpeg" id="3" srcset="" class="imagen" onclick="CambiarImagen(this,3)"></td>
+            </tr>
+            <tr>
+                <td><img src="./img/9.jpeg" id="4" srcset="" class="imagen" onclick="CambiarImagen(this,4)"></td>
+                <td><img src="./img/9.jpeg" id="5" srcset="" class="imagen" onclick="CambiarImagen(this,5)"></td>
+                <td><img src="./img/9.jpeg" id="6" srcset="" class="imagen" onclick="CambiarImagen(this,6)"></td>
+                <td><img src="./img/9.jpeg" id="7" srcset="" class="imagen" onclick="CambiarImagen(this,7)"></td>
+            </tr>
+            <tr>
+                <td><img src="./img/9.jpeg" id="8" srcset="" class="imagen" onclick="CambiarImagen(this,8)"></td>
+                <td><img src="./img/9.jpeg" id="9" srcset="" class="imagen" onclick="CambiarImagen(this,9)"></td>
+                <td><img src="./img/9.jpeg" id="10" srcset="" class="imagen" onclick="CambiarImagen(this,10)"></td>
+                <td><img src="./img/9.jpeg" id="11" srcset="" class="imagen" onclick="CambiarImagen(this,11)"></td>
+            </tr>
+            <tr>
+                <td><img src="./img/9.jpeg" id="12" srcset="" class="imagen" onclick="CambiarImagen(this,12)"></td>
+                <td><img src="./img/9.jpeg" id="13" srcset="" class="imagen" onclick="CambiarImagen(this,13)"></td>
+                <td><img src="./img/9.jpeg" id="14" srcset="" class="imagen" onclick="CambiarImagen(this,14)"></td>
+                <td><img src="./img/9.jpeg" id="15" srcset="" class="imagen" onclick="CambiarImagen(this,15)"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

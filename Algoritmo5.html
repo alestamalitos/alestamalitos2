@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 5</title>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <script>
+        function calcularPi(lim) {
+            if(!isNaN(document.getElementById('num').value && 0 < (document.getElementById('num').value))) {
+                let i = 1;
+                let res = 0;
+                let control = false;
+                process.stdout.write("π = 4 ( ");
+
+                for (let iter = 0; iter < lim; iter++) {
+                    if (control) {
+                    if (i < lim * 2 - 1) {
+                        process.stdout.write(`1/${i} + `);
+                    } else {
+                        process.stdout.write(`1/${i}`);
+                    }
+                    res -= 1.0 / i;
+                    control = false;
+                    } else {
+                    if (i < lim * 2 - 1) {
+                        process.stdout.write(`1/${i} - `);
+                    } else {
+                        process.stdout.write(`1/${i}`);
+                    }
+                    res += 1.0 / i;
+                    control = true;
+                    }
+                    i += 2;
+                } 
+            } else { 
+                document.getElementById('out').innerHTML = `Existe un error en el tipo de datos ingresados. <br> El valor debe ser numérico y mayor a 0.`; 
+            }
+            process.stdout.write(" )\n");
+            console.log(`π = ${4 * res}`);
+        }
+
+
+        function pi() { 
+        let num = document.getElementById('num').value;
+        
+        if (!isNaN(num) && num > 0) {
+            let limit = parseInt(num);
+            let i = 1;
+            let res = 0;
+            let control = false;
+            let resultado = `Resultado: <br>π = 4 ( `;
+
+            for (let a = 0; a < limit; a++) { 
+                if (control) {
+                    if (i < limit * 2 - 1) {
+                        resultado += `1/${i} + `;
+                    } else {
+                        resultado += `1/${i}`;
+                    }
+                    res -= 1.0 / i;
+                    control = false;
+                } else {
+                    if (i < limit * 2 - 1) {
+                        resultado += `1/${i} - `;
+                    } else {
+                        resultado += `1/${i}`;
+                    }
+                    res += 1.0 / i;
+                    control = true;
+                }
+                i += 2;
+            }
+
+            resultado += ` )<br>π = ${4 * res}`;
+            document.getElementById('out').innerHTML = resultado;
+        } else {
+            document.getElementById('out').innerHTML = "^ Error en el dato ingresado ^";
+        }
+    }
+
+    </script>
+</head>
+<body class = "outset" bgcolor = "#0f0f1b" style="color:#fafbf6">
+    <div class="container">
+        <p><a href = "Index.html"><button>Regresar al menú.</button></a><br></p>
+        <h1>Pi</h1>
+        Introduce el limite de terminos. <br>
+        <input  type="text" id="num" value="20"><br>
+        <input type="button" value="Numero de terminos." onclick="pi()">
+        <p id="out">Resultado: </p>
+    </div>
+</body>
+</html>

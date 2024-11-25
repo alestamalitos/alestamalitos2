@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 4</title>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <script> 
+        function fibonacci() {
+            if (!isNaN(document.getElementById('num').value) && document.getElementById('num').value > 0) {
+                let limit = parseInt(document.getElementById('num').value);
+                let res = 'Resultado: <br>0';
+                let a = 0;  
+                let b = 1;  
+
+                for (let i = 1; i < limit; i++) {
+                    res += `, ${b}`;
+                    let temp = a + b;
+                    a = b;
+                    b = temp;
+                }
+                document.getElementById('out').innerHTML = res; 
+            } else { 
+                document.getElementById('out').innerHTML = `Existe un error en el tipo de datos ingresados. <br> El valor debe ser numérico y mayor a 0.`; 
+            }
+        }
+    </script>
+</head>
+<body class="outset" bgcolor="#0f0f1b" style="color:#fafbf6">
+    <div class="container">
+        <p><a href="Index.html"><button>Regresar al menú.</button></a><br></p>
+        <h1>Serie de Fibonacci</h1>
+        Introduce el límite de términos para la serie de Fibonacci. <br>
+        <input type="text" id="num" value="20"><br>
+        <input type="button" value="Número de términos" onclick="fibonacci()">
+        <p id="out">Resultado: </p>
+    </div>
+</body>
+</html>

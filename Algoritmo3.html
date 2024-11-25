@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 3</title>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <script> 
+    function cubo()  {
+        if (!isNaN(document.getElementById('num').value) && document.getElementById('num').value > 1) {
+            var naturales = parseInt(document.getElementById('num').value);
+            var resultado = 'Resultado: <br>';
+            var count = 0;
+
+            for (let i = 2; count < naturales; i += 2) {
+                resultado += `${i} al cubo es ${i * i * i} <br>`;
+                count++;
+            }
+            document.getElementById('out').innerHTML = resultado; 
+        } else {
+            document.getElementById('out').innerHTML = `Existe un error en el tipo de datos ingresados. <br> El valor debe ser numérico y mayor a 1.`; 
+        }
+    }
+    </script>
+</head>
+<body class="outset" bgcolor="#0f0f1b" style="color:#fafbf6">
+    <div class="container">
+        <p><a href="Index.html"><button>Regresar al menú.</button></a><br></p>
+        <h1>Números naturales pares elevados al cubo</h1>
+        Escribir un programa que muestre en pantalla los primeros números naturales pares elevados al cubo.<br>
+        Ejemplo:<br>
+        2 al cubo es 8<br>
+        4 al cubo es 64<br>
+        6 al cubo es ...<br>
+        8 al cubo es ...<br>
+        100 al cubo es ...<br>
+        Cantidad de números naturales pares: <input type="text" id="num" value="5"><br>
+        <input type="button" value="Encontrar los primeros n números naturales." onclick="cubo()"><br>
+        <p id="out">Resultado: </p>
+    </div>
+</body>
+</html>

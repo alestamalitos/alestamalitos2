@@ -1,0 +1,162 @@
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f0f1b;
+  background-image: url('https://i.redd.it/mwee1q771g381.png'); /* Fondo de imagen */
+  background-size: cover;
+  background-position: center;
+  color: #fafbf6;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+  
+/* Encabezados */
+h1 {
+  position:relative;
+  top: 1%;
+  color: #4a90e2;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  position: relative;
+  top: 5%;
+  color: #a3b1c6;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* Texto */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d4d7dd;
+  margin-bottom: 0.5rem;
+}
+
+/* Contenedor principal */
+.container {
+  position: relative;
+  width: 550px;
+  height: 750px;
+  background-color: #1c1c2b; /* Fondo del contenedor */
+  border: 10px solid #4a90e2; /* Borde alrededor del juego */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botones */
+input[type=button] {
+  width: 150px;
+  height: 150px;
+  font-size: 75px;
+  background-color: #565a75;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+input[type=button]:hover {
+  background-color: #5450c4;
+}
+
+input[type=submit] {
+  position: relative;
+  top: -83%;
+  font-size: 30px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #357ab8;
+}
+
+/* Tabla */
+table {
+  position: relative;
+  top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 100%;
+  z-index: 1;
+  border: 5px solid #4a90e2; /* Borde alrededor de toda la tabla */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+tr {
+  position: relative;
+}
+
+td {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  border: 5px solid #4a90e2; /* Borde alrededor de cada celda */
+  border-right: none;
+  border-bottom: none;
+}
+
+td:nth-child(3) {
+  border-right: 5px solid #4a90e2; /* Agregar borde derecho a la última columna */
+}
+
+tr:nth-child(3) td {
+  border-bottom: 5px solid #4a90e2; /* Agregar borde inferior a la última fila */
+}
+
+tr:nth-child(1) {
+  border-top: none;
+}
+
+tr:nth-child(2) {
+  border-top: none;
+}
+
+/* Indicador de turno */
+#turno {
+  position: relative;
+  top: 5%;
+  color: #fafbf6;
+  font-size: 1.5rem;
+  z-index: 10; /* Asegura que el indicador de turno esté por encima de otros elementos */
+}
+
+/* Botón de regreso */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  z-index: 10; /* El botón de regresar también tiene un z-index alto para estar por encima de los demás */
+}
+
+.back-button button {
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.back-button button:hover {
+  background-color: #357ab8;
+}

@@ -1,0 +1,115 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f1b;
+    color: #fafbf6;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('https://i.redd.it/mwee1q771g381.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #1c1c2b; /* Fondo del contenedor */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Encabezado principal */
+h1 {
+    position: relative;
+    top: 1%;
+    color: #4a90e2;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+/* Etiquetas de texto */
+p {
+    font-size: 1.1rem;
+    color: #a3b1c6;
+    margin: 0.5rem 0;
+}
+
+/* Área de texto */
+textarea {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fafbf6;
+    background-color: #1c1c2b;
+    border: 1px solid #4a90e2;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+/* Selectores de clave */
+select {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+    color: #fafbf6;
+    background-color: #1c1c2b;
+    border: 1px solid #4a90e2;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Botones */
+input[type="button"] {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+input[type="button"]:hover {
+    background-color: #357ab8;
+}
+
+/* Mensaje encriptado */
+#encryptedMessage {
+    background-color: #1c1c2b;
+    color: #fafbf6;
+    border: 1px solid #4a90e2;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#index { 
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    z-index: 10;
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
